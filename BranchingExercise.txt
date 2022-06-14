@@ -1,0 +1,30 @@
+Part I
+git checkout -b
+fast forwards can only happen if there have not been commits on the original branch while the new branch is being worked on
+git checkout
+git branch -D
+When Git can not determine what file or folder to choose when merging since there have been different commits with changes to the same file
+
+Part II
+mkdir BranchingExercise
+git init
+echo "The first text" > first_text.txt
+git add first_text
+git commit -m "first commit"
+
+git checkout -b The1stbranch
+echo "Hello World from The 1st branch" > second_text.txt
+git add second_text
+git commit -m "Commit from 1st branch"
+
+git checkout master
+echo "Hello World from Master branch" > second_text.txt
+git add second_text
+git commit -m "Commit from Master branch"
+
+git merge The1stbranch
+
+# Modify file second_text to keep contents of The1stbranch by Visual Studio at here and then do code below
+
+git add second_text
+git commit -m "Merging contents of The1stbranch into master"
